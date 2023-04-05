@@ -1,0 +1,20 @@
+/* --- SIDEBAR --- */
+.sidebar .sidebar-brand{
+    font-size: .8em;;
+}
+.sidebar .sidebar-brand sup{
+    display: block;
+    margin-top: .8rem;
+}
+
+
+@media screen and (max-width: 991px) {
+    .index_about-me .social-links{
+        position: relative !important;
+        bottom: 0 !important;
+        margin: 0 0 1rem 0 !important
+    }
+    .index_about-me .text{
+       margin: .5rem 0 !important;
+    }
+}
