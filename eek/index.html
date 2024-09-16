@@ -378,11 +378,11 @@
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Age</div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">23</div>
+                                                    <div id="ageDisplay" class="h5 mb-0 mr-3 font-weight-bold text-gray-800"></div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-4">
-                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 23%"></div>
+                                                        <div id="progressBar" class="progress-bar bg-info" role="progressbar"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -862,6 +862,22 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/datatables-demo.js"></script>
+
+    
+    <!-- Make age dynamic by calculating it based on birth year and increment annually -->
+    <script>
+        // Set the birth year
+        const birthYear = 1999;
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - birthYear;
+    
+        // Display age
+        document.getElementById("ageDisplay").textContent = age;
+    
+        // Update progress bar width
+        const progressBar = document.getElementById("progressBar");
+        progressBar.style.width = age + "%";
+    </script>
 
 </body>
 
